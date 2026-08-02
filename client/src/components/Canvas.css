@@ -1,0 +1,32 @@
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.drawing-canvas {
+  display: block;
+  width: 100%;
+  height: 600px;
+  cursor: crosshair;
+  background: white;
+}
+
+.remote-cursor {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.1s ease;
+}
+
+@media (max-width: 768px) {
+  .drawing-canvas {
+    height: 400px;
+  }
+}
